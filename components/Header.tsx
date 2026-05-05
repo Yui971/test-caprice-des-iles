@@ -51,7 +51,7 @@ export default function Header() {
 
             {/* Brand */}
             <a href="#top" className="flex items-center gap-3 group" aria-label="Caprice des Îles">
-              <div className="w-9 h-9 md:w-11 md:h-11 flex-shrink-0 transition-transform duration-500 group-hover:scale-105">
+              <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 transition-transform duration-500 group-hover:scale-105">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="img/logo.png"
@@ -59,7 +59,7 @@ export default function Header() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-serif font-semibold text-base md:text-lg text-[#1C1408] leading-tight hidden sm:block">
+              <span className="font-serif font-semibold text-lg md:text-xl text-[#C41030] leading-tight hidden sm:block">
                 Caprice des Îles
               </span>
             </a>

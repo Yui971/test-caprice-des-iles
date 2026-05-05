@@ -39,7 +39,7 @@ export default function MenuSection({ category }: { category: Category }) {
   const { t } = useLang();
 
   return (
-    <section id={category.id} className="mb-14 md:mb-18 scroll-mt-28">
+    <section id={category.id} className="mb-14 md:mb-20 scroll-mt-36">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -49,7 +49,7 @@ export default function MenuSection({ category }: { category: Category }) {
         className="mb-5 md:mb-7"
       >
         <div className="flex items-baseline gap-3 mb-1">
-          <h2 className="font-serif font-semibold text-xl md:text-2xl text-[#1C1408]">
+          <h2 className="font-serif font-semibold text-2xl md:text-3xl text-[#1C1408]">
             {t(category.nom)}
           </h2>
           {category.sous_titre && (
