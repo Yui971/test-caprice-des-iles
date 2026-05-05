@@ -24,10 +24,10 @@ export default function MenuCard({ plat, index = 0 }: { plat: Plat; index?: numb
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.4, delay: index * 0.04, ease: [0.16, 1, 0.3, 1] }}
-      className={`group relative bg-white rounded-xl px-4 sm:px-5 py-4 border transition-all duration-250 ${
+      className={`group relative bg-[#FEFAF2] rounded-xl px-4 sm:px-5 py-4 border transition-all duration-250 ${
         unavailable
           ? 'opacity-45 border-[#EDE5CF]'
-          : 'border-[#E4D6B8] hover:border-[#B8820A]/30 hover:shadow-[0_4px_20px_rgba(184,130,10,0.08)]'
+          : 'border-[#E0D0A8] hover:border-[#B8820A]/35 hover:shadow-[0_4px_20px_rgba(184,130,10,0.10)] hover:bg-white'
       }`}
     >
       {/* Hover shine */}
