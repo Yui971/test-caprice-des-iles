@@ -14,7 +14,7 @@ export default function MenuBadge({ tag, lang }: Props) {
   const meta = tagMeta[tag];
   if (!meta) return null;
   return (
-    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wide ${meta.cls}`}>
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] uppercase ${meta.cls}`}>
       {meta[lang]}
     </span>
   );
