@@ -56,8 +56,8 @@ export default function Footer() {
                   <img src="img/logo.png" alt="" className="w-full h-full object-contain" />
                 </div>
                 <div>
-                  <p className="font-serif font-semibold text-white text-base">Caprice des Îles</p>
-                  <p className="text-white/30 text-xs">{c.tagline}</p>
+                  <p className="font-serif font-semibold text-[#E8394E] text-lg">Caprice des Îles</p>
+                  <p className="text-white/35 text-xs">{c.tagline}</p>
                 </div>
               </div>
               <p className="text-white/25 text-xs leading-relaxed max-w-xs">
@@ -120,12 +120,12 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-white/20 text-xs">
             <p>© {year} Caprice des Îles · Tous droits réservés</p>
             <div className="flex items-center gap-4">
-              <button onClick={() => setLegalOpen(true)} className="hover:text-white/45 transition-colors">{c.legal}</button>
+              <button onClick={() => setLegalOpen(true)} className="text-[#E8394E]/70 hover:text-[#E8394E] transition-colors font-medium">{c.legal}</button>
               <span>·</span>
               <span>
                 {c.credits}{' '}
                 <a href="https://yui971.github.io/portfolio-berdier-chrisnael/" target="_blank" rel="noopener"
-                  className="text-[#B8820A]/60 hover:text-[#D4A825] transition-colors font-medium">
+                  className="text-[#E8394E]/70 hover:text-[#E8394E] transition-colors font-semibold">
                   Chrisnaël Berdier
                 </a>
               </span>
@@ -168,8 +168,8 @@ export default function Footer() {
                   </div>
                 ))}
                 <div className="pt-2 flex gap-4">
-                  <a href="https://yui971.github.io/portfolio-berdier-chrisnael/" target="_blank" rel="noopener" className="text-[#B8820A] hover:text-[#8B6008] text-sm">Portfolio</a>
-                  <a href="https://www.linkedin.com/in/chrisna%C3%ABl-berdier-b634a3389/" target="_blank" rel="noopener" className="text-[#B8820A] hover:text-[#8B6008] text-sm">LinkedIn</a>
+                  <a href="https://yui971.github.io/portfolio-berdier-chrisnael/" target="_blank" rel="noopener" className="text-[#E8394E] hover:text-[#C41030] text-sm font-semibold">Portfolio</a>
+                  <a href="https://www.linkedin.com/in/chrisna%C3%ABl-berdier-b634a3389/" target="_blank" rel="noopener" className="text-[#E8394E] hover:text-[#C41030] text-sm font-semibold">LinkedIn</a>
                 </div>
               </div>
             </motion.div>

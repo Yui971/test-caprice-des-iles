@@ -81,21 +81,21 @@ export default function Hero() {
         style={{ y, opacity }}
         className="relative z-10 text-center px-4 sm:px-8 max-w-4xl mx-auto"
       >
-        {/* Logo */}
+        {/* Logo — agrandi */}
         <motion.div
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex justify-center mb-8 md:mb-10"
         >
-          <div className="relative w-24 h-24 md:w-32 md:h-32">
-            <div className="absolute inset-0 rounded-full bg-amber-300/20 blur-xl" />
-            <div className="relative w-full h-full glass rounded-full p-4 border border-amber-400/30 shadow-[0_4px_30px_rgba(184,130,10,0.15)]">
+          <div className="relative w-36 h-36 md:w-44 md:h-44">
+            <div className="absolute inset-0 rounded-full bg-amber-300/30 blur-2xl" />
+            <div className="relative w-full h-full glass rounded-full p-5 border border-amber-400/35 shadow-[0_6px_40px_rgba(184,130,10,0.2)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="img/logo.png"
                 alt="Caprice des Îles"
-                className="w-full h-full object-contain p-1"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -116,9 +116,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#1C1408] leading-tight mb-4"
+          className="font-serif font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[6rem] leading-tight mb-4"
         >
-          Caprice{' '}
+          <span className="text-[#C41030]">Caprice</span>{' '}
           <span className="shimmer-text italic">des Îles</span>
         </motion.h1>
 
@@ -141,7 +141,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.6 }}
-          className="text-[#9A836A] text-base md:text-lg font-light tracking-wide mb-10 md:mb-12"
+          className="text-[#9A836A] text-lg md:text-xl font-light tracking-wide mb-10 md:mb-12"
         >
           {p.tagline}
         </motion.p>

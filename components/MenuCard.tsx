@@ -44,7 +44,7 @@ export default function MenuCard({ plat, index = 0 }: { plat: Plat; index?: numb
               ))}
             </div>
           )}
-          <h3 className={`font-serif text-base md:text-[17px] leading-snug ${unavailable ? 'text-[#9A836A] line-through' : 'text-[#1C1408]'}`}>
+          <h3 className={`font-serif text-[17px] md:text-lg leading-snug ${unavailable ? 'text-[#9A836A] line-through' : 'text-[#1C1408]'}`}>
             {t(plat.nom)}
           </h3>
           {plat.description && (
@@ -55,7 +55,7 @@ export default function MenuCard({ plat, index = 0 }: { plat: Plat; index?: numb
         <div className="flex-shrink-0 text-right">
           {plat.prix !== null ? (
             <>
-              <span className={`font-semibold text-base md:text-lg font-serif ${unavailable ? 'text-[#C4B090]' : 'gold-text'}`}>
+              <span className={`font-semibold text-lg md:text-xl font-serif ${unavailable ? 'text-[#C4B090]' : 'gold-text'}`}>
                 {plat.prix.toFixed(2)}<span className="text-xs ml-0.5">€</span>
               </span>
               {plat.prix_note && (
