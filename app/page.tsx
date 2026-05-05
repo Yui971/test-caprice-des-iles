@@ -12,8 +12,7 @@ export default function Home() {
       <Header />
       <Hero />
 
-      {/* Menu */}
-      <div id="menu" className="bg-[#020D1C]">
+      <div id="menu" className="bg-[#FEFCF4]">
         <CategoryNav />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-16">
           {menuData.categories.map((category) => (
