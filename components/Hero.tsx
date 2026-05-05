@@ -39,30 +39,30 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* ── Warm tropical light background ── */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FDF5DC] via-[#FEFCF4] to-[#EDF8F2]" />
+      {/* ── Warm tropical background ── */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#F9EDCC] via-[#FDF6E8] to-[#E8F5EF]" />
 
-      {/* Soft ambient blobs */}
+      {/* Ambient blobs — warmer, more saturated */}
       <motion.div
-        className="ambient-blob w-[600px] h-[600px] bg-amber-200/35 top-[-10%] right-[-8%]"
+        className="ambient-blob w-[600px] h-[600px] bg-amber-300/45 top-[-10%] right-[-8%]"
         animate={{ x: [0, 25, 0], y: [0, 18, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="ambient-blob w-[500px] h-[500px] bg-teal-200/25 bottom-[-15%] left-[-8%]"
+        className="ambient-blob w-[500px] h-[500px] bg-teal-300/30 bottom-[-15%] left-[-8%]"
         animate={{ x: [0, -18, 0], y: [0, -22, 0] }}
         transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="ambient-blob w-[350px] h-[350px] bg-emerald-100/40 top-1/3 left-1/4"
+        className="ambient-blob w-[350px] h-[350px] bg-orange-200/35 top-1/3 left-1/4"
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
       />
 
-      {/* Decorative tropical leaves */}
-      <TropicalLeaf className="absolute top-16 left-4 md:left-14 w-20 md:w-32 text-emerald-700/18 animate-[leafSway_9s_ease-in-out_infinite]" />
-      <TropicalLeaf className="absolute bottom-20 right-4 md:right-16 w-24 md:w-36 text-emerald-700/14 animate-[leafSway_9s_ease-in-out_3s_infinite] rotate-180" />
-      <TropicalLeaf className="absolute top-2/5 right-10 w-14 text-amber-600/12 animate-[leafSway_11s_ease-in-out_1.5s_infinite]" />
+      {/* Decorative tropical leaves — neutral/monochrome */}
+      <TropicalLeaf className="absolute top-16 left-4 md:left-14 w-20 md:w-32 text-[#1C1408]/7 animate-[leafSway_9s_ease-in-out_infinite]" />
+      <TropicalLeaf className="absolute bottom-20 right-4 md:right-16 w-24 md:w-36 text-[#1C1408]/5 animate-[leafSway_9s_ease-in-out_3s_infinite] rotate-180" />
+      <TropicalLeaf className="absolute top-2/5 right-10 w-14 text-[#1C1408]/5 animate-[leafSway_11s_ease-in-out_1.5s_infinite]" />
 
       {/* Floating orbs */}
       <motion.div

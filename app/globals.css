@@ -56,14 +56,14 @@ body {
 
 /* ─── glass utilities ─────────────── */
 .glass {
-  background: rgba(255, 252, 244, 0.75);
+  background: rgba(250, 244, 224, 0.78);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(180, 155, 100, 0.18);
+  border: 1px solid rgba(180, 155, 100, 0.22);
 }
 
 .glass-nav {
-  background: rgba(255, 253, 248, 0.88);
+  background: rgba(250, 245, 230, 0.90);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
@@ -103,9 +103,26 @@ body {
   color: #1A5C38;
 }
 .badge-plat-du-jour {
-  background: rgba(10,114,104,0.1);
-  border: 1px solid rgba(10,114,104,0.3);
-  color: #0A7268;
+  background: rgba(0, 220, 180, 0.08);
+  border: 1px solid rgba(0, 210, 170, 0.55);
+  color: #00B896;
+  text-shadow: 0 0 6px rgba(0, 200, 160, 0.7);
+  box-shadow:
+    0 0 8px  rgba(0, 200, 160, 0.25),
+    0 0 18px rgba(0, 200, 160, 0.12),
+    inset 0 0 6px rgba(0, 220, 180, 0.06);
+  animation: neonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(0,200,160,0.25), 0 0 14px rgba(0,200,160,0.10), inset 0 0 5px rgba(0,220,180,0.05);
+    border-color: rgba(0,210,170,0.45);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(0,200,160,0.45), 0 0 28px rgba(0,200,160,0.22), inset 0 0 10px rgba(0,220,180,0.10);
+    border-color: rgba(0,220,180,0.75);
+  }
 }
 .badge-sauce {
   background: rgba(196,56,40,0.08);

@@ -180,7 +180,7 @@ function IceCreamGrid({ sub }: { sub: SubCategory }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="bg-white rounded-2xl border border-[#E4D6B8] p-5 sm:p-6"
+      className="bg-[#FEFAF2] rounded-2xl border border-[#E0D0A8] p-5 sm:p-6"
     >
       {sub.prix_info && (
         <div className="flex items-center gap-2 mb-4">
