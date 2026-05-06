@@ -29,28 +29,34 @@ export default function CategoryNav() {
   const btnRefs  = useRef<(HTMLButtonElement | null)[]>([]);
 
   // Mutable interaction state — avoids stale closure issues with listeners
-  const isHolding  = useRef(false);
-  const holdTimer  = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const pressedIdx = useRef(-1);
-  const curDragIdx = useRef(0);
-  const touchMoved = useRef(false);
-  const touchTime  = useRef(0);
-  const startX     = useRef(0);
-  const startY     = useRef(0);
+  const isHolding    = useRef(false);
+  const holdTimer    = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pressedIdx   = useRef(-1);
+  const curDragIdx   = useRef(0);
+  const touchMoved   = useRef(false);
+  const touchTime    = useRef(0);
+  const startX       = useRef(0);
+  const startY       = useRef(0);
+  // Suppresses the passive scroll tracker while a programmatic smooth scroll runs
+  const navScrollLocked  = useRef(false);
+  const navScrollTimer   = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  /* ── Dynamic offset: bottom of sticky nav + small gap ── */
-  const getOffset = () => {
-    const track = trackRef.current;
-    return track ? track.getBoundingClientRect().bottom + 8 : 140;
-  };
-
-  /* ── Scroll to section ── */
+  /* ── Scroll to section — locks scroll tracker until scroll settles ── */
   const scrollToIdx = useCallback((idx: number) => {
     const el = document.getElementById(NAV_ITEMS[idx]?.id ?? '');
     if (!el) return;
     const track = trackRef.current;
     const offset = track ? track.getBoundingClientRect().bottom + 8 : 140;
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
+
+    // Prevent the passive onScroll from overwriting the nav indicator
+    // while the smooth scroll is in progress
+    navScrollLocked.current = true;
+    if (navScrollTimer.current) clearTimeout(navScrollTimer.current);
+    navScrollTimer.current = setTimeout(() => {
+      navScrollLocked.current = false;
+    }, 1000);
+
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   }, []);
 
@@ -189,7 +195,7 @@ export default function CategoryNav() {
   /* ── Passive scroll tracking: find which section just passed the nav line ── */
   useEffect(() => {
     const onScroll = () => {
-      if (isHolding.current) return;
+      if (isHolding.current || navScrollLocked.current) return;
       const track  = trackRef.current;
       const offset = track ? track.getBoundingClientRect().bottom + 8 : 140;
       let bestIdx  = 0;
